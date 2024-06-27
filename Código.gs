@@ -1,3 +1,29 @@
+/**
+ * Retorna o número da última linha com conteúdo não vazio de um intervalo.
+ *
+ * @param {Array<Array>} range - O intervalo a ser verificado.
+ * @return {number} O número da última linha com conteúdo não vazio.
+ * @customfunction
+ */
+function ULTIMALINHA2(range) {
+  var lastRow = -1;
+  
+  for (var i = range.length - 1; i >= 0; i--) {
+    for (var j = 0; j < range[i].length; j++) {
+      if (range[i][j] !== '') {
+        lastRow = i + 1;
+        break;
+      }
+    }
+    if (lastRow !== -1) {
+      break;
+    }
+  }
+  
+  return lastRow;
+}
+
+
 function ampNumeroPorExtenso(numero) {
   if (numero === 0) return "zero";
   

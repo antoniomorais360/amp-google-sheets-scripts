@@ -4,7 +4,7 @@
 
 
 //isNotEmpty(celula) - checa se célula está vazia
-function isNotEmpty(string) {
+function isNotEmpty2(string) {
   if(!string)             return false;         
   if(string == '')        return false;
   if(string === false)    return false; 
